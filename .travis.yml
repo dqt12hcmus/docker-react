@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t dqt12hcmus/docker-react -f Dockerfile.dev .
 script:
-  - docker run dqt12hcmus/docker-react npm run test -- -- coverage
+  - docker run -e CI=true dqt12hcmus/docker-react npm run test
